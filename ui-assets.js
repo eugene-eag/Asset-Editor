@@ -48,7 +48,7 @@ class UIAssets extends UIPanel
             if(item)
             {
                 item.selected = true;
-                item.scrollIntoView(false);
+                item.scrollIntoView({block: 'nearest'});
             }
             
             this._selected = item;
