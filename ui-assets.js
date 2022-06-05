@@ -48,7 +48,7 @@ class UIAssets extends UIPanel
             if(item)
             {
                 item.selected = true;
-                item.scrollIntoView();
+                item.scrollIntoView(false);
             }
             
             this._selected = item;
