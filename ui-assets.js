@@ -11,6 +11,7 @@ class UIAssets extends UIPanel
         item.locked = param.locked;
         item.visible = !param.hidden;
 
+        this.selected = item;
         this._content.addEventListener('click', (event) => this.selected = null);
     }
 
