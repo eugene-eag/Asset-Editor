@@ -63,12 +63,14 @@ class UIPanel extends UIBaseElement
             this._content.style.display = 'none';
             this._titlebarButton.src = 'icons/fold.svg';
             this.style.flexGrow = '0';
+            this.style.minHeight = '3em';
         }
         else
         {
             this._content.style.display = 'flex';
             this._titlebarButton.src = 'icons/unfold.svg';
             this.style.flexGrow = this._grow ? '1' : '0';
+            this.style.minHeight = '8em';
         }
 
         let event = new CustomEvent('fold', {detail: {folded: value}});
