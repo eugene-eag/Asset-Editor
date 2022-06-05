@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Interface</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800">
+        <link rel="stylesheet" href="ui-panel.css">
+        <link rel="stylesheet" href="ui-button.css">
+        <link rel="stylesheet" href="ui-assets-item.css">
+        <script src="ui-base-element.js"></script>
+        <script src="ui-panel.js"></script>
+        <script src="ui-button.js"></script>
+        <script src="ui-assets-item.js"></script>
+        <script src="ui-assets.js"></script>
+        <style>
+            html, body
+            {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body
+            {
+                font-family: Montserrat, sans-serif;
+                color: white;
+                user-select: none;
+                background-image: url(background.jpg);
+                background-size: cover;
+            }
+
+            .ui-root
+            {
+                width: 100%;
+                height: 100%;
+                opacity: 0.9;
+            }
+
+            .ui-sidebar
+            {
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+                gap: 0.5em;
+                width: 18em;
+                height: calc(100% - 2em);
+            }
+
+            .ui-toolbar
+            {
+                background-color: #1f1f1f;
+                border-radius: 0.4em;
+                padding: 0.5em;
+            }
+
+            .ui-toolbar-grid
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.25em;
+                margin-top: 0.25em;
+            }
+
+            .ui-asset-menu
+            {
+                background-color: #1f1f1f;
+                border-radius: 0.4em;
+                padding: 0.5em;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.25em;
+            }
+        </style>
+        <script>
+
+            let tools, assets, attrs, menu, button;
+
+            function _load()
+            {
+                tools = document.getElementById('uiTools');
+                assets = document.getElementById('uiAssets');
+                attrs = document.getElementById('uiAttributes');
+                menu = document.getElementById('uiAssetMenu');
+                button = document.getElementById('uiCreateButton');
+
+                menu.style.display = 'none';
+                button.addEventListener('click', (event) => { displayMenu(!button.on); });
+            }
+
+            function displayMenu(visible)
+            {
+                tools.style.display = visible ? 'none' : null;
+                assets.style.display = visible ? 'none' : null;
+                attrs.style.display = visible ? 'none' : null;
+                menu.style.display = !visible ? 'none' : null;
+                button.on = visible;
+            }
+
+            function createAsset(type)
+            {
+                let param
+
+                switch(type)
+                {
+                    case 'picture': param = {icon: 'icons/image.svg', name: 'Picture'}; break;
+                    case 'text': param = {icon: 'icons/text.svg', name: 'Text'}; break;
+                    case 'link': param = {icon: 'icons/link.svg', name: 'Link'}; break;
+                    case 'video': param = {icon: 'icons/video.svg', name: 'Video'}; break;
+                    case 'livevideo': param = {icon: 'icons/camera.svg', name: 'Live Video'}; break;
+                    case '3dobject': param = {icon: 'icons/cube.svg', name: '3D Object'}; break;
+                    case 'webpage': param = {icon: 'icons/globe.svg', name: 'Web Page'}; break;
+                    case 'teleport': param = {icon: 'icons/teleport.svg', name: 'Teleport'}; break;
+                }
+
+                displayMenu(false);
+                let assets = document.getElementById('uiAssets');
+                assets.addItem(param);
+            }
+
+            function deleteAsset()
+            {
+                assets.removeSelectedItem();
+            }
+
+            function duplicateAsset()
+            {
+                assets.duplicateSelectedItem();
+            }
+        </script>
+    </head>
+    <body onload="_load();">
+        <div class="ui-root">
+            <div class="ui-sidebar">
+                <div class="ui-toolbar">
+                    <ui-button icon="icons/add.svg" text="Create Asset" id="uiCreateButton"
+                        style="font-size: 1.2em; justify-content: center; font-weight: 600; text-transform: uppercase"></ui-button>
+                    <div class="ui-toolbar-grid" id="uiTools">
+                        <ui-button icon="icons/remove.svg" text="Delete" onclick="deleteAsset();"></ui-button>
+                        <ui-button icon="icons/clone.svg" text="Duplicate" onclick="duplicateAsset();"></ui-button>
+                        <ui-button icon="icons/globe.svg" text="World" toggle="true"></ui-button>
+                        <ui-button icon="icons/lock1.svg" text="Lock All" toggle="true"></ui-button>
+                        <ui-button icon="icons/camera.svg" text="Focus"></ui-button>
+                        <ui-button icon="icons/help.svg" text="Help" onclick="window.open('https://en.wikipedia.org/wiki/Help!', '_blank');"></ui-button>
+                    </div>
+                </div>
+                <ui-assets id="uiAssets" title="Assets" grow="true"></ui-assets>
+                <ui-panel id="uiAttributes" title="Attributes"></ui-panel>
+                <div class="ui-asset-menu" id="uiAssetMenu">
+                    <ui-button icon="icons/image.svg" text="Picture" direction="column" iconsize="2" onclick="createAsset('picture');"></ui-button>
+                    <ui-button icon="icons/text.svg" text="Text" direction="column" iconsize="2" onclick="createAsset('text');"></ui-button>
+                    <ui-button icon="icons/link.svg" text="Button" direction="column" iconsize="2" onclick="createAsset('link');"></ui-button>
+                    <ui-button icon="icons/video.svg" text="Video" direction="column" iconsize="2" onclick="createAsset('video');"></ui-button>
+                    <ui-button icon="icons/camera.svg" text="Live Video" direction="column" iconsize="2" onclick="createAsset('livevideo');"></ui-button>
+                    <ui-button icon="icons/cube.svg" text="3D Object" direction="column" iconsize="2" onclick="createAsset('3dobject');"></ui-button>
+                    <ui-button icon="icons/globe.svg" text="Web Page" direction="column" iconsize="2" onclick="createAsset('webpage');"></ui-button>
+                    <ui-button icon="icons/teleport.svg" text="Teleport" direction="column" iconsize="2" onclick="createAsset('teleport');"></ui-button>  
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

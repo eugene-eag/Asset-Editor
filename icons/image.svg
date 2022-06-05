@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--Generator: Xara Designer (www.xara.com), SVG filter version: 6.6.0.1-->
+<svg fill="none" fill-rule="evenodd" stroke="black" stroke-width="0.501" stroke-linejoin="bevel" stroke-miterlimit="10" font-family="Times New Roman" font-size="16" style="font-variant-ligatures:none" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="72.152pt" height="72pt" viewBox="210.346 -499.688 72.152 72">
+ <defs>
+	</defs>
+ <g id="Page background" transform="scale(1 -1)"/>
+ <g id="Layer 1" transform="scale(1 -1)">
+  <g id="Group" fill="#ffffff" fill-rule="nonzero" stroke-linejoin="miter" stroke="none" stroke-width="0.144">
+   <path d="M 279.435,499.688 L 213.409,499.688 C 211.724,499.688 210.346,498.309 210.346,496.624 L 210.346,430.752 C 210.346,429.067 211.724,427.688 213.409,427.688 L 279.281,427.688 C 280.966,427.688 282.345,429.067 282.498,430.599 L 282.498,496.624 C 282.498,498.309 281.12,499.688 279.435,499.688 Z M 240.065,433.663 L 218.618,433.663 L 236.082,456.028 L 246.345,440.556 C 246.345,440.556 246.345,440.403 246.499,440.403 L 240.065,433.663 C 240.218,433.816 240.218,433.663 240.065,433.663 Z M 276.371,433.663 L 248.337,433.663 L 276.371,463.382 L 276.371,433.663 Z M 276.371,493.713 L 276.371,472.267 L 250.635,444.999 L 238.686,463.075 C 238.073,463.995 237.154,464.454 236.235,464.454 C 235.316,464.454 234.396,463.995 233.784,463.229 L 216.32,440.556 L 216.32,493.867 L 276.371,493.867 L 276.371,493.713 Z" marker-start="none" marker-end="none"/>
+   <path d="M 251.86,486.667 C 245.886,486.667 240.831,481.918 240.831,475.79 C 240.831,469.662 245.886,464.76 251.86,464.76 C 257.988,464.76 262.89,469.509 262.89,475.637 C 262.89,481.765 257.835,486.667 251.86,486.667 Z M 251.86,470.888 C 249.256,470.888 246.958,473.033 246.958,475.79 C 246.958,478.394 249.103,480.692 251.86,480.692 C 254.618,480.692 256.762,478.394 256.762,475.79 C 256.762,473.186 254.618,470.888 251.86,470.888 Z" marker-start="none" marker-end="none"/>
+  </g>
+ </g>
+</svg>

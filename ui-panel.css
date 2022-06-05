@@ -1,0 +1,42 @@
+
+.ui-panel
+{
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ui-panel-titlebar
+{
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.ui-panel-titlebar-text
+{
+    padding: 1em;
+    flex-grow: 1;
+    /*text-transform: uppercase;*/
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+.ui-panel-titlebar-button
+{
+    width: 1.25em;
+    padding: 0.875em;
+    opacity: 0.25;
+}
+
+.ui-panel-content
+{
+    background-color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    min-height: 5em;
+    flex-grow: 1;
+}

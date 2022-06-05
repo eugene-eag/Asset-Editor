@@ -1,0 +1,46 @@
+
+.ui-assets-item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9em;
+    padding: 0.1em;
+    padding-left: 0.5em;
+    padding-right: 0.6em;
+    border-bottom: 1px solid #3f3f3f;
+    cursor: pointer;
+}
+
+.ui-assets-item:hover
+{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ui-assets-item-selected, .ui-assets-item-selected:hover
+{
+    background-color: #8b30f5;
+}
+
+.ui-assets-item-icon
+{
+    object-fit: contain;
+    padding: 0.5em;
+    width: 1.2em;
+    height: 1.2em;
+    opacity: 0.6;
+}
+
+.ui-assets-item-text
+{
+    flex-grow: 1;
+    padding: 0.5em;
+}
+
+.ui-assets-item-toggle
+{
+    padding: 0.4em;
+    object-fit: contain;
+    width: 1.2em;
+    height: 1.2em;
+}

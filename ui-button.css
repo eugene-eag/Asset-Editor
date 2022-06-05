@@ -1,0 +1,41 @@
+
+.ui-button
+{
+    display: flex;
+    padding: 0.5em;
+    background-color: #2f2f2f;
+    border-radius: 0.2em;
+    overflow: hidden;
+    cursor: pointer;
+    align-items: center;
+}
+
+.ui-button:hover
+{
+    background-color: #8b30f5;
+}
+
+.ui-button:active
+{
+    background-color: #f85b25;
+}
+
+.ui-button-on
+{
+    background-color: #8b30f5;
+}
+
+.ui-button-text
+{
+    padding: 0.33em;
+    /*border: 1px solid white;*/
+}
+
+.ui-button-icon
+{
+    padding: 0.33em;
+    object-fit: contain;
+    width: 1.2em;
+    height: 1.2em;
+    /*border: 1px solid white;*/
+}
